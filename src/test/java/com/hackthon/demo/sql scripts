@@ -1,0 +1,26 @@
+
+CREATE TABLE Customer (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Portfolio (
+  portfolio_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
+  name VARCHAR(255) NOT NULL,
+  portfolio_value DECIMAL(10,2), -- Adjust decimal places as needed
+  portfolio_number VARCHAR(255),
+  strategy VARCHAR(255),
+  performance VARCHAR(255)
+);
+
+
+CREATE TABLE Instrument (
+  instrument_id INT PRIMARY KEY,
+  portfolio_id INT NOT NULL,
+  FOREIGN KEY (portfolio_id) REFERENCES Portfolio(portfolio_id),
+  txn_ref VARCHAR(255),
+  instrument_type VARCHAR(255),
+  instrument_value DECIMAL(10,2) -- Adjust decimal places as needed
+);
