@@ -1,16 +1,11 @@
 package com.hackthon.demo.jpa;
-
-
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.PersistenceContexts;
+import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Customer {
 
     @Id

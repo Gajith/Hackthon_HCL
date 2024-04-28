@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @ComponentScan("com.hackthon.demo")
 @EnableJpaRepositories(basePackages = "com.hackthon.demo.repository")
-@EntityScan("com.hackthon.demo.jpa")
+//@EntityScan("com.hackthon.demo.jpa")
 public class Application {
 
 	public static void main(String[] args) {
